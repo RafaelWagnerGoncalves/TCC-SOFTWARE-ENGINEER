@@ -1,0 +1,18 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "PG local",
+      "username": "postgres",
+      "database": "Manga",
+      "password": "123456",
+      "connectionTimeout": 30
+    }
+  ],
+  "cSpell.words": [
+    "Mangas"
+  ]
+}

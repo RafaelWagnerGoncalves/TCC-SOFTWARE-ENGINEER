@@ -1,0 +1,226 @@
+* {
+  background-color: #1e1e2a;
+}
+
+.page-container {
+  padding: 20px;
+  background-color: #1e1e2a;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #a0a0b1;
+  margin-bottom: 20px;
+}
+
+.manga-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.manga-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #29293a;
+  border-radius: 8px;
+  overflow: visible;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 0;
+  height: 400px;
+}
+
+.manga-cover {
+  flex: 1;
+  height: 65%;
+}
+
+.manga-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.manga-details {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.manga-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.manga-title {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.add-manga-btn {
+  background-color: #28a745;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.add-manga-btn:hover {
+  background-color: #218838;
+}
+
+.manga-description {
+  font-size: 0.75rem;
+  color: #c0c0d1;
+  margin-bottom: 10px;
+  text-align: justify;
+  line-height: 1.2;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination-controls .ngx-pagination {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.pagination-controls .ngx-pagination li {
+  padding: 8px 12px;
+  border: 1px solid #444;
+  background-color: #29293a;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination-controls .ngx-pagination .current {
+  background-color: #444;
+  font-weight: bold;
+}
+
+.manga-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.more-tags {
+  background-color: #777;
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  position: relative;
+}
+
+.tags-modal {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: #1e1e2a;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  width: max-content;
+  max-width: 200px;
+  text-align: left;
+  visibility: visible;
+}
+
+.tags-modal h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.tags-modal .modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  background-color: #1e1e2a;
+}
+
+
+.tag {
+  background-color: #444;
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80px;
+}
+.modal-content {
+  text-align: center;
+}
+
+.all-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.search-bar {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 3px solid #20001c;
+  border-radius: 5px;
+  background-color: #1e1e2a;
+  color: white;
+}
+
+.search-bar input::placeholder {
+  color: white;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #45a049;
+  box-shadow: 0 0 5px rgba(72, 239, 71, 0.5);
+}

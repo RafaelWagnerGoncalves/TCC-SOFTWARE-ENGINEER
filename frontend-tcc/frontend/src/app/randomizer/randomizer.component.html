@@ -1,0 +1,20 @@
+<div class="randomizer-container">
+  <h1 class="randomizer-title">Randomizer</h1>
+
+  <button class="randomize-button" (click)="getRandomManga()">Randomize</button>
+
+  <div *ngIf="randomManga" class="manga-card-container">
+    <div class="manga-cover">
+      <img [src]="randomManga.image" [alt]="randomManga.name" />
+    </div>
+    <div class="manga-details">
+      <h2 class="manga-title">{{ randomManga.name }}</h2>
+      <p class="manga-description">{{ randomManga.description }}</p>
+      <div class="manga-tags">
+        <span class="tag" *ngFor="let tag of randomManga.tags">
+          {{ tag.attributes.name.en }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

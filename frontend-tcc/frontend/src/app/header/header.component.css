@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #323B45;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin: 0 15px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.nav-item:hover {
+  color: #007bff;
+}
+
+.login {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}

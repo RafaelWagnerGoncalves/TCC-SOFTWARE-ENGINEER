@@ -1,0 +1,31 @@
+<div class="list-container">
+  <h1>Your Manga List</h1>
+
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search for a manga..."
+      [(ngModel)]="searchText"
+      (input)="onSearchChange(searchText)"
+    />
+  </div>
+
+  <div class="manga-list">
+    <div *ngFor="let manga of filteredMangas" class="manga-item">
+      <div class="manga-details">
+        <img [src]="manga.cover_image" alt="{{ manga.name }}" width="150" height="200" />
+        <h2>{{ manga.name }}</h2>
+        <p class="current-chapter">Current Chapter: {{ manga.current_chapter }}</p>
+        <button class="remove-manga-btn" (click)="removeManga(manga.name)">Remove</button>
+      </div>
+      <button class="view-chapters-btn" (click)="selectManga(manga.id)">View Progress</button>
+
+      <div *ngIf="selectedManga === manga.id" class="chapters-dropdown">
+        <label for="chapters">Select Chapter:</label>
+        <select id="chapters" (change)="updateProgress($event)">
+          <option *ngFor="let chapter of chapters" [value]="chapter">Chapter {{ chapter }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>

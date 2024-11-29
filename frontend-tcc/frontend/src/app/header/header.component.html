@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="nav-item">
+    <img src="../../assets/icons/home.png" alt="Home Icon" />
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+  </div>
+  <div class="nav-item">
+    <img src="../../assets/icons/to-do-list.png" alt="Sua Lista Icon" />
+    <a routerLink="/list" routerLinkActive="active">Sua Lista</a>
+  </div>
+  <div class="nav-item">
+    <img src="../../assets/icons/dice.png" alt="Randomizer Icon" />
+    <a routerLink="/randomizer" routerLinkActive="active">Randomizer</a>
+  </div>
+  <div class="nav-item login" *ngIf="!isLoggedIn; else logoutTemplate">
+    <img src="../../assets/icons/user.png" alt="Login Icon" />
+    <a routerLink="/login" routerLinkActive="active">Login</a>
+  </div>
+  <ng-template #logoutTemplate>
+    <div class="nav-item login" (click)="logout()">
+      <img src="../../assets/icons/logout.png" alt="Logout Icon" />
+      <a href="#">Logout</a>
+    </div>
+  </ng-template>
+</div>
